@@ -10,10 +10,10 @@ public class HelloController {
 
 
 
-    @GetMapping("hello")
-    public String hello (@RequestParam(value = "name",required = true)String name, Model model){
+    @GetMapping("/")
+    public String hello (@RequestParam(value = "name",required = false)String name, Model model){
         model.addAttribute("name",name);
-        return "hello";
+        return "index";
     }
 
 }
